@@ -1,31 +1,34 @@
 const express = require("express");
 const fs = require("fs");
+const path = require("path");
 
 const app = express();
 
 // Set the port of our application
 const PORT = 8080;
 
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.static('/app/public'));
 
-const connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "password1234",
-    database: "movie_planner_db"
-});
+// // Sets up the Express app to handle data parsing
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
 
-connection.connect(function(err) {
-    if (err) {
-        console.error("error connecting: " + err.stack);
-        return;
-    }
+// const connection = mysql.createConnection({
+//     host: "localhost",
+//     port: 3306,
+//     user: "root",
+//     password: "password1234",
+//     database: "movie_planner_db"
+// });
 
-    console.log("connected as id " + connection.threadId);
-});
+// connection.connect(function(err) {
+//     if (err) {
+//         console.error("error connecting: " + err.stack);
+//         return;
+//     }
+
+//     console.log("connected as id " + connection.threadId);
+// });
 
 // Use Handlebars to render the main index.html page with the movies in it.
 app.get("/", function(req, res) {
@@ -33,16 +36,16 @@ app.get("/", function(req, res) {
     //     if (err) {
     //         return res.status(500).end();
     //     }
-    res.render("./index");
+    res.render("./app/public/home.html");
     // res.render("index", { movies: data });
 });
 
-app.get("/layouts/survey", function(req, res) {
+app.get("./survey", function(req, res) {
     // connection.query("SELECT * FROM movies;", function(err, data) {
     //     if (err) {
     //         return res.status(500).end();
     //     }
-    res.render("./layouts/survey");
+    res.render("./app/public/survey.html");
     // res.render("index", { movies: data });
 });
 // Create a new movie
