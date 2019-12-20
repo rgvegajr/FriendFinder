@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Friend Finder</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif
+    }
+    
+    .w3-bar,
+    h1,
+    button {
+        font-family: "Montserrat", sans-serif
+    }
+    
+    .fa-anchor,
+    .fa-coffee {
+        font-size: 200px
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-indigo w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-indigo" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">API Friends List</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">GitHub Repo</a>
+        </div>
+
+    </div>
+
+    <!-- Header -->
+    <section class="w3-container w3-indigo w3-center" style="padding: 64px 16px 16px 16px">
+        <h1 class="w3-margin w3-xlarge">Survey Questions!</h1>
+        <hr>
+        <p>Answer a few basic questions.Then find the friend with the greatest compatibility!</p>
+    </section>
+
+    <form class="w3-container w3-card-4" method="post" action="/survey">
+
+        <h3><label>Name (Required)</label>
+            <input class="w3-input w3-border" name="name" type="text"></h3>
+
+        <h3><label>Link to Photo Image (Required)</label>
+            <input class="w3-input w3-border" name="photo" type="img"></h3>
+
+        <h3>Question 1:</h3>
+        <p><label>Your mind is always buzzing with unexplored ideas and plans.</label></p>
+        <select class="w3-select w3-border" name="Question1">
+    <option value="" disabled selected>(Select an Option)</option>
+    <option value="1">1 (strongly Disagree)</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 (strongly Agree)</option>
+  </select>
+
+        <h3>Question 2:</h3>
+        <p><label>Generally speaking, you rely more on your experience than your imagination.</label></p>
+        <select class="w3-select w3-border" name="Question1">
+  <option value="" disabled selected>(Select an Option)</option>
+  <option value="1">1 (strongly Disagree)</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5 (strongly Agree)</option>
+</select>
+
+        <h3>Question 3:</h3>
+        <p><label>You find it easy to stay relaxed and focused even when there is some pressure.</label></p>
+        <select class="w3-select w3-border" name="Question1">
+<option value="" disabled selected>(Select an Option)</option>
+<option value="1">1 (strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (strongly Agree)</option>
+</select>
+
+        <h3>Question 4:</h3>
+        <p><label>You rarely do something just out of sheer curiosity.</label></p>
+        <select class="w3-select w3-border" name="Question1">
+<option value="" disabled selected>(Select an Option)</option>
+<option value="1">1 (strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (strongly Agree)</option>
+</select>
+
+        <h3>Question 5:</h3>
+        <p><label>People can rarely upset you.</label></p>
+        <select class="w3-select w3-border" name="Question1">
+<option value="" disabled selected>(Select an Option)</option>
+<option value="1">1 (strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (strongly Agree)</option>
+</select>
+
+        <h3>Question 6:</h3>
+        <p><label>It is often difficult for you to relate to other people's feelings.</label></p>
+        <select class="w3-select w3-border" name="Question1">
+<option value="" disabled selected>(Select an Option)</option>
+<option value="1">1 (strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (strongly Agree)</option>
+</select>
+
+        <h3>Question 7:</h3>
+        <p><label>In a discussion, truth should be more important than people's sensitivities.</label></p>
+        <select class="w3-select w3-border" name="Question1">
+<option value="" disabled selected>(Select an Option)</option>
+<option value="1">1 (strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (strongly Agree)</option>
+</select>
+
+        <h3>Question 8:</h3>
+        <p><label>You rarely get carried away by fantasies and ideas.</label></p>
+        <select class="w3-select w3-border" name="Question1">
+<option value="" disabled selected>(Select an Option)</option>
+<option value="1">1 (strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (strongly Agree)</option>
+</select>
+
+        <h3>Question 9:</h3>
+        <p><label>You think that everyone's views should be respected regardless of whether they are supported by facts or not.</label></p>
+        <select class="w3-select w3-border" name="Question1">
+<option value="" disabled selected>(Select an Option)</option>
+<option value="1">1 (strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (strongly Agree)</option>
+</select>
+
+        <h3>Question 10:</h3>
+        <p><label>You feel more energetic after spending time with a group of people.</label></p>
+        <select class="w3-select w3-border" name="Question1">
+<option value="" disabled selected>(Select an Option)</option>
+<option value="1">1 (strongly Disagree)</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5 (strongly Agree)</option>
+</select>
+
+        <div>
+            <p><button class="w3-button w3-indigo w3-border w3-xxlarge" type="submit">Submit!</button></p>
+        </div>
+
+
+        <div class="w3-container">
+            <h2>W3.CSS Modal 1</h2>
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
+
+            <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <p>Some text. Some text. Some text.</p>
+                        <p>Some text. Some text. Some text.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+            <div class="w3-xlarge w3-padding-32">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </footer>
+
+        <script>
+            // Used to toggle the menu on small screens when clicking on the menu button
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+
+</body>
+
+</html>
