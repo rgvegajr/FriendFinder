@@ -1,67 +1,27 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const bodyParser = require('body-parser');
 
 const app = express();
 
 // Set the port of our application
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
-app.use(express.static('/app/public'));
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+// parse application/json
+app.use(bodyParser.json());
 
-// // Sets up the Express app to handle data parsing
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
+// app.use(function (req, res) {
+//     res.setHeader('Content-Type', 'text/plain')
+//     res.write('you posted:\n')
+//     res.end(JSON.stringify(req.body, null, 2))
+//   })
 
-// const connection = mysql.createConnection({
-//     host: "localhost",
-//     port: 3306,
-//     user: "root",
-//     password: "password1234",
-//     database: "movie_planner_db"
-// });
+require('./app/routing/apiRoutes.js')(app);
+require('./app/routing/htmlRoutes.js')(app);
 
-// connection.connect(function(err) {
-//     if (err) {
-//         console.error("error connecting: " + err.stack);
-//         return;
-//     }
-
-//     console.log("connected as id " + connection.threadId);
-// });
-
-// Use Handlebars to render the main index.html page with the movies in it.
-app.get("/", function(req, res) {
-    // connection.query("SELECT * FROM movies;", function(err, data) {
-    //     if (err) {
-    //         return res.status(500).end();
-    //     }
-    res.render("./app/public/home.html");
-    // res.render("index", { movies: data });
-});
-
-app.get("./survey", function(req, res) {
-    // connection.query("SELECT * FROM movies;", function(err, data) {
-    //     if (err) {
-    //         return res.status(500).end();
-    //     }
-    res.render("./app/public/survey.html");
-    // res.render("index", { movies: data });
-});
-// Create a new movie
-app.post("/layouts/survey", function(req, res) {
-    // connection.query("INSERT INTO movies (movie) VALUES (?)", [req.body.movie], function(err, result) {
-    //     if (err) {
-    //         return res.status(500).end();
-    //     }
-
-    // Send back the ID of the new movie
-    // res.json({ id: result.insertId });
-    // console.log({ id: result.insertId });
-    res.render("./layouts/survey");
-    console.log(response.data);
-
-});
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
