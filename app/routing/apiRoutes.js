@@ -1,4 +1,5 @@
 const path = require("path");
+const peopleArray = require("../data/friends.js");
 
 //routing for data - what data the user sees and well as the route to store data entered by user
 // 4. Your `apiRoutes.js` file should contain two routes:
@@ -8,12 +9,12 @@ const path = require("path");
 
 module.exports = function(app) {
 
-    app.get("/api/friends", function(res,req) {
+    app.get("/api/friends", function(res, req) {
         rest.json(peopleArray);
     });
 
-    app.post("/api/friends", function(res,req){
-                
+    app.post("/api/friends", function(res, req) {
+
 
     })
 

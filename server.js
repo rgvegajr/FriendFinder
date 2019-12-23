@@ -4,7 +4,6 @@ const path = require("path");
 const bodyParser = require('body-parser');
 
 const app = express();
-
 // Set the port of our application
 const PORT = process.env.PORT || 8080;
 
@@ -13,15 +12,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-// app.use(function (req, res) {
-//     res.setHeader('Content-Type', 'text/plain')
-//     res.write('you posted:\n')
-//     res.end(JSON.stringify(req.body, null, 2))
-//   })
 
 require('./app/routing/apiRoutes.js')(app);
 require('./app/routing/htmlRoutes.js')(app);
-
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
