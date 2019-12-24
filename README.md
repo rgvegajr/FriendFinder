@@ -1,18 +1,9 @@
-# FriendFinder
-
-using nodemon
-plus external environmant variable to support deployment to server
-other npm packages:
-express for routing
-body-parser for parsing user inputs for processing
-requiring built-in path and fs for global path and file operations 
-
 ### (Note: this file is mark-down formatted to be read in a code-editor "preview" function or on github)
 ## Welcome to the readme file for my FriendFinder app!  
 
 This application is deployed on heroku at:
 
-* https://github.com/rgvegajr/nodejs-mysql
+* https://stormy-lowlands-10588.herokuapp.com/
 
 The github repository ca be found at: 
 
