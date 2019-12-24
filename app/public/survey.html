@@ -17,13 +17,13 @@
     h6 {
         font-family: "Lato", sans-serif
     }
-
+    
     .w3-bar,
     h1,
     button {
         font-family: "Montserrat", sans-serif
     }
-
+    
     .fa-anchor,
     .fa-coffee {
         font-size: 200px
@@ -34,11 +34,11 @@
 
     <!-- Navbar -->
     <div class="w3-top">
-        <div class="w3-bar w3-indigo w3-card w3-left-align w3-large">
+        <div class="w3-bar w3-indigo w3-card w3-left-align">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-indigo" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="/" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-            <a href="/friends" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">API Friends List</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">GitHub Repo</a>
+            <a href="/api/friends" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">API Friends List</a>
+            <a href="https://github.com/rgvegajr/FriendFinder" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">GitHub Repo</a>
         </div>
     </div>
 
@@ -52,10 +52,10 @@
     <form class="w3-container w3-card-4" method="post" action="/survey">
 
         <h4><label>Name (Required)</label>
-            <input class="w3-input w3-border" name="name" type="text"></h4>
+            <input class="w3-input w3-border" name="name" type="text" required></h4>
 
         <h4><label>Link to Photo Image (Required)</label>
-            <input class="w3-input w3-border" name="photo" type="img"></h4>
+            <input class="w3-input w3-border" name="photo" type="img" required></h4>
 
         <h4>Question 1:</h4>
         <p><label>Your mind is always buzzing with unexplored ideas and plans.</label></p>
@@ -171,60 +171,7 @@
             <p><button id="userForm" class="w3-button w3-indigo w3-border w3-xxlarge" type="submit">Submit!</button></p>
         </div>
 
-
-        <div class="w3-container">
-            <h2>W3.CSS Modal 1</h2>
-            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
-
-            <div id="id01" class="w3-modal">
-                <div class="w3-modal-content">
-                    <div class="w3-container">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                        <p>Some text. Some text. Some text.</p>
-                        <p>Some text. Some text. Some text.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
         <script>
-            //    move all this computation to back end
-            function calcFriend() {
-                let currentURL = windows.location.origin;
-                $.ajax({
-                        url: currentURL + "/public/survey",
-                        method: "GET"
-                    })
-                    .done(function(peopleArray) {
-                        let user = [];
-                        let match = [];
-                        for (let i = 0; i < peopleArray.length; i++) {
-                            //calc
-
-
-
-
-                        }
-
-
-
-                    });
-
-            }
-
-            calcFriend();
-
-            // Used to toggle the menu on small screens when clicking on the menu button
-            function myFunction() {
-                var x = document.getElementById("navDemo");
-                if (x.className.indexOf("w3-show") == -1) {
-                    x.className += " w3-show";
-                }
-                else {
-                    x.className = x.className.replace(" w3-show", "");
-                }
-            }
         </script>
 
 </body>

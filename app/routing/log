@@ -1,0 +1,132 @@
+MacBook-Pro-2:FriendFinder vegarg$ nodemon server.js
+[nodemon] 2.0.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching dir(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node server.js`
+Server listening on: http://localhost:8080
+{
+  name: 'simba',
+  photo: 'https://images.freeimages.com/images/large-previews/815/xmas-bunny-1313404.jpg',
+  scores: [
+    4, 3, 3, 3, 3,
+    3, 3, 3, 3, 4
+  ]
+}
+[
+  {
+    name: 'Ahmed',
+    photo: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
+    scores: [
+      5, 1, 4, 4, 5,
+      1, 2, 5, 4, 1
+    ]
+  },
+  {
+    name: 'Jamal',
+    photo: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
+    scores: [
+      1, 1, 2, 2, 3,
+      3, 4, 4, 5, 5
+    ]
+  },
+  {
+    name: 'Suzie',
+    photo: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
+    scores: [
+      3, 3, 3, 3, 3,
+      3, 3, 3, 3, 3
+    ]
+  },
+  {
+    name: 'Jack',
+    photo: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
+    scores: [
+      5, 5, 4, 4, 3,
+      3, 2, 2, 1, 1
+    ]
+  },
+  {
+    name: 'Jill',
+    photo: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
+    scores: [
+      2, 2, 2, 2, 2,
+      2, 2, 2, 2, 2
+    ]
+  },
+  {
+    name: 'Evelyn',
+    photo: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
+    scores: [
+      4, 4, 4, 4, 4,
+      4, 4, 4, 4, 4
+    ]
+  }
+]
+compatScore[0][0] :1
+compatScore[0][1] :2
+compatScore[0][2] :1
+compatScore[0][3] :1
+compatScore[0][4] :2
+compatScore[0][5] :2
+compatScore[0][6] :1
+compatScore[0][7] :2
+compatScore[0][8] :1
+compatScore[0][9] :3
+compatScore[1][0] :3
+compatScore[1][1] :2
+compatScore[1][2] :1
+compatScore[1][3] :1
+compatScore[1][4] :0
+compatScore[1][5] :0
+compatScore[1][6] :1
+compatScore[1][7] :1
+compatScore[1][8] :2
+compatScore[1][9] :1
+compatScore[2][0] :1
+compatScore[2][1] :0
+compatScore[2][2] :0
+compatScore[2][3] :0
+compatScore[2][4] :0
+compatScore[2][5] :0
+compatScore[2][6] :0
+compatScore[2][7] :0
+compatScore[2][8] :0
+compatScore[2][9] :1
+compatScore[3][0] :1
+compatScore[3][1] :2
+compatScore[3][2] :1
+compatScore[3][3] :1
+compatScore[3][4] :0
+compatScore[3][5] :0
+compatScore[3][6] :1
+compatScore[3][7] :1
+compatScore[3][8] :2
+compatScore[3][9] :3
+compatScore[4][0] :2
+compatScore[4][1] :1
+compatScore[4][2] :1
+compatScore[4][3] :1
+compatScore[4][4] :1
+compatScore[4][5] :1
+compatScore[4][6] :1
+compatScore[4][7] :1
+compatScore[4][8] :1
+compatScore[4][9] :2
+compatScore[5][0] :0
+compatScore[5][1] :1
+compatScore[5][2] :1
+compatScore[5][3] :1
+compatScore[5][4] :1
+compatScore[5][5] :1
+compatScore[5][6] :1
+compatScore[5][7] :1
+compatScore[5][8] :1
+compatScore[5][9] :0
+peopleArray length = 6
+compatArray length =6
+compatArray = 
+[ 16, 12, 2, 12, 12, 8 ]
+bestCompat = 2
+index = 2
+match= {"name":"Suzie","photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg","scores":[3,3,3,3,3,3,3,3,3,3]}
